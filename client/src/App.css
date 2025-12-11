@@ -1,0 +1,669 @@
+/* Background full page */ 
+.app-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Navbar */
+.nav-bar {
+  height: 60px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Navbar buttons group */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-small-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-small-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.nav-admin-btn {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: #fff;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.nav-admin-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 14px rgba(221, 36, 118, 0.7);
+}
+
+/* Main area */
+.main-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 60px 80px;
+}
+
+/* ========== HOME LAYOUT ========== */
+
+.home-layout {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Left side info block */
+.home-info {
+  flex: 1.4;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* BIG HEADING */
+.home-heading {
+  font-size: 42px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.5),
+               0 0 25px rgba(255, 255, 255, 0.6);
+  animation: glowPulse 1.6s infinite alternate ease-in-out;
+  letter-spacing: 2px;
+}
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4),
+                 0 0 20px rgba(255, 255, 255, 0.3);
+    transform: scale(1);
+  }
+  100% {
+    text-shadow: 0 0 30px rgba(255, 255, 255, 1),
+                 0 0 50px rgba(255, 255, 255, 1);
+    transform: scale(1.03);
+  }
+}
+
+.home-sub {
+  font-size: 15px;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+/* Benefits title */
+.benefits-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffdf6e;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Info cards row */
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 18px 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: 0.25s ease-in-out;
+  cursor: default;
+  text-align: center;
+}
+
+/* Icon styling */
+.info-card .icon {
+  font-size: 38px;
+  color: #2c2c54;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.info-card h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #3c1053;
+}
+
+.info-card p {
+  margin: 0;
+  font-size: 13px;
+  color: #444;
+}
+
+/* Soft hover animation */
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+/* ========== AUTH CARD (LOGIN / REGISTER) ========== */
+
+.card {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a18cd1);
+  width: 380px;
+  border-radius: 20px;
+  padding: 25px 25px 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+/* Simple entry animation */
+.animate-card {
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.welcome-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Panel title */
+.panel-title {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c2c54;
+}
+
+/* Message box */
+.msg-box {
+  padding: 8px 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.msg-error {
+  background: #ffe0e0;
+  color: #b30000;
+}
+
+.msg-success {
+  background: #e0ffe8;
+  color: #007f2c;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.form input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.85);
+  transition: 0.3s;
+  color: #333;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.9);
+}
+
+.form input:focus {
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 1),
+    inset 0 0 6px rgba(255, 255, 255, 0.9);
+  transform: scale(1.02);
+}
+
+/* Buttons inside form */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.primary-btn {
+  flex: 1;
+  margin-right: 5px;
+  background: linear-gradient(135deg, #ff0066, #ff6600, #ffcc00);
+  color: white;
+  border: none;
+  padding: 11px 0;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 6px 18px rgba(255, 60, 0, 0.7);
+}
+
+.ghost-btn {
+  flex: 0.7;
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid #444;
+  color: #222;
+  padding: 11px 0;
+  border-radius: 30px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ghost-btn:hover {
+  background: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Bottom link */
+.bottom-link {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #333;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #5e35b1;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* Footer */
+.footer-bar {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  opacity: 0.9;
+}
+
+/* Small screen responsive */
+@media (max-width: 900px) {
+  .main-area {
+    padding: 20px 20px 70px;
+  }
+
+  .home-layout {
+    flex-direction: column;
+  }
+
+  .home-card {
+    margin-top: 20px;
+  }
+}
+
+/* ============================
+   ADMIN DASHBOARD CLEAN UI
+=============================*/
+
+.admin-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  padding: 30px;
+  margin-top: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+.admin-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: #1e3c72;
+  text-transform: uppercase;
+}
+
+.admin-subtitle {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* STATUS BAR */
+.admin-status {
+  background: #f4f7ff;
+  border-left: 6px solid #1e3c72;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* BUTTON ROW */
+.admin-btn-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* BUTTON STYLE */
+.admin-btn-clean {
+  flex: 1;
+  min-width: 220px;
+  padding: 18px 12px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.admin-btn-clean:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* SPECIFIC BUTTON COLORS */
+.btn-add {
+  background: linear-gradient(135deg, #009ffd, #2a2a72);
+}
+
+.btn-headline {
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+}
+
+.btn-start {
+  background: linear-gradient(135deg, #00c851, #007e33);
+}
+
+.btn-stop {
+  background: linear-gradient(135deg, #ff4444, #cc0000);
+}
+
+.btn-result {
+  background: linear-gradient(135deg, #7852ff, #1e00ff);
+}
+
+.btn-logout {
+  background: linear-gradient(135deg, #9e9e9e, #616161);
+}
+
+/* BUTTON LABEL DESCRIPTION */
+.admin-btn-clean span {
+  display: block;
+  font-size: 11px;
+  margin-top: 3px;
+  font-weight: 400;
+  opacity: .9;
+}
+
+/* RESPONSIVE */
+@media(max-width:700px) {
+  .admin-btn-clean {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* Small panel under admin dashboard for Add Candidate */
+.admin-panel {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  padding: 18px 16px 22px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+/* ============================= */
+/*      PREVIEW PAGE STYLES      */
+/* ============================= */
+
+.vote-wrapper {
+  width: 100%;
+  max-width: 950px;
+  margin: auto;
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  padding: 35px 30px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.vote-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #1e3c72;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.vote-headline {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ff6b00;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  animation: slideUp 0.5s ease-out;
+}
+
+.vote-status {
+  font-size: 16px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #444;
+}
+
+.vote-status span {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Candidate grid */
+.vote-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* Candidate card */
+.vote-card {
+  background: white;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  cursor: default;
+  transition: 0.3s ease-in-out;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vote-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Candidate logo */
+.vote-logo {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 3px solid #2a5298;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.vote-card:hover .vote-logo {
+  transform: scale(1.05);
+}
+
+/* Candidate name */
+.vote-card h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1e3c72;
+  margin-bottom: 8px;
+}
+
+/* Fake vote button in preview (disabled) */
+.vote-btn {
+  background: #d9d9d9 !important;
+  color: #666 !important;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 26px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: not-allowed;
+  text-transform: uppercase;
+}
+
+/* No candidates */
+.no-candidates {
+  grid-column: 1/-1;
+  font-size: 18px;
+  color: #777;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+/* Back button */
+.ghost-btn {
+  border: 2px solid #333;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.ghost-btn:hover {
+  background: #333;
+  color: white;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .vote-title {
+    font-size: 22px;
+  }
+
+  .vote-headline {
+    font-size: 18px;
+  }
+
+  .vote-card h4 {
+    font-size: 16px;
+  }
+
+  .vote-logo {
+    width: 70px;
+    height: 70px;
+  }
+}
+.vote-banner {
+  background: #005eb8;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+.vote-card h4 {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
